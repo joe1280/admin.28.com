@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>添加</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+            <link href="./css/mine.css" type="text/css" rel="stylesheet">
+                </head>
+
+                <body>
+
+                    <div class="div_head">
+
+                    </div>
+                    <div></div>
+                    <h2>当位置:修改</h2>
+                    <div style="font-size: 13px;margin: 10px 5px">
+                        <form action="__SELF__" method="post" enctype="multipart/form-data">
+                            <input type="hidden" name="id" value="<?php echo $admin_info['id'];?>"/>
+                             <input type='hidden' name='type_id' value="<?php echo I('get.type_id'); ?>"/>
+                            <table border="1" width="100%" class="table_a">
+
+
+                                <tr>
+                                    <td>属性名称</td>
+                                    <td><input type="text" name="attr_name" value="<?php echo $admin_info['attr_name']; ?>"/></td>
+                                    <td>
+                                        <span class="require-field">*</span>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+                                <tr>
+                                    <td>属性类型</td>
+                                    <td>单选<input type="radio" name="attr_type" value="单选" <?php if($admin_info['attr_type']=='单选') echo 'checked="checked"'; ?>/>
+                                        唯一 <input type="radio" name="attr_type" value="唯一" <?php if($admin_info['attr_type']=='唯一') echo 'checked="checked"'; ?>/>
+
+                                    </td>
+
+                                    <td>
+                                        <span class="require-field">*</span>
+                                    </td>
+                                </tr>
+
+
+
+
+
+
+                               
+
+
+
+
+
+                                <tr>
+                                    <td>属性可选值</td>
+                                    <td>
+                                        
+                                       
+                                    <textarea rows="6" cols="60" name="attr_option_val"><?php echo $admin_info['attr_option_val']; ?></textarea>
+                                    <td>
+                                        <span class="require-field">*</span>
+                                    </td>
+                                </tr>
+
+
+
+
+
+                            </table>
+
+                            <input type="submit" value="修改">
+                        </form>
+                    </div>
+                </body>
+                </html>

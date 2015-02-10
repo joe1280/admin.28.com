@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ECSHOP 管理中心 - 商品管理员 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="__CONTROLLER__/add">添加管理员</a></span>
+    <span class="action-span1"><a href="#">ECSHOP 管理中心</a></span>
+    <span id="search_id" class="action-span1"> - 管理员 </span>
+
+    <div style="clear:both"></div>
+
+</h1>
+
+<div class="form-div">
+    <form action="__SELF__" name="searchForm" method="get">
+  
+   管理员名称: <input type="text" name="un" size="15" />
+
+   管理员ID: <input type="text" name="id" size="15" />
+   <input type="submit" value=" 搜索 " class="button" />
+    </form>
+</div>
+<form method="post" action="__CONTROLLER__/mdel" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+            <tr>
+				<th>管理员ID</th>
+                <th>管理员名称</th>
+              
+                <th>操作</th>
+
+				
+            </tr>
+			<?php foreach($admin_array['list'] as $v) {?>
+            <tr>
+				<td><?php if ($v['id']>1) {?><input type="checkbox" name="ids[]" value="<?php echo $v['id'];?>"/><?php }?><?php echo $v['id']?></td>
+				<td><?php echo $v['username']?></td>
+				
+				<td>
+				
+                <a href="__CONTROLLER__/update/id/<?php echo $v['id'];?>" title="编辑">编辑</a> 
+			<?php if($v['id']>1){?>
+                <a href="__CONTROLLER__/del/id/<?php echo $v['id'];?>" title="编辑">移除</a> 
+			<?php }?>
+                </td>
+            </tr>
+           <?php }?> 
+        </table>
+    </div>
+	<input type="submit" value="删除所选"/>
+</form>
+
+<?php echo $admin_array['show'];?>
+</body>
+</html>

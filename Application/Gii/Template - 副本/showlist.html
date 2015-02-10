@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>ECSHOP 管理中心 - 商品 </title>
+<meta name="robots" content="noindex, nofollow">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="__PUBLIC__/Styles/general.css" rel="stylesheet" type="text/css" />
+<link href="__PUBLIC__/Styles/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<h1>
+    <span class="action-span"><a href="__CONTROLLER__/add">添加</a></span>
+    <span class="action-span1"><a href="#">ECSHOP 管理中心</a></span>
+    <span id="search_id" class="action-span1"> -  </span>
+
+    <div style="clear:both"></div>
+
+</h1>
+
+<form method="post" action="__CONTROLLER__/mdel" name="listForm">
+    <div class="list-div" id="listDiv">
+        <table cellpadding="3" cellspacing="1">
+
+	
+            <tr>
+			<th width="30"> <input type="checkbox"/> </th>
+			 <?php foreach($fields as $k=>$v):?>
+				<?php if($v['Field']=='password')
+					continue;
+				?>
+
+				<th><?php echo $v['Comment']; ?></th>
+				
+                
+			<?php endforeach;?>
+			<th>操作</th>
+            </tr>
+
+		
+			<?php echo '<?php foreach($admin_array[\'list\'] as $k=>$v):?>'; ?>
+            <tr>
+				<td><input type="checkbox" name="ids[]" value="<?php echo '<?php echo $v[\'id\'];?>'; ?>"/><?php echo $v['id']?></td>
+				<?php foreach($fields as $k=>$v):?>
+				<?php if($v['Field']=='password')
+					continue;
+				?>
+				<td><?php echo '<?php echo $v[\''.$v['Field'].'\']?>'; ?></td>
+				<?php endforeach;?>
+				<td>
+				
+                <a href="__CONTROLLER__/update/id/<?php echo '<?php echo $v[\'id\'];?>'; ?>" title="编辑">编辑</a> 
+			
+                <a href="__CONTROLLER__/del/id/<?php echo '<?php echo $v[\'id\'];?>'; ?>" title="编辑">移除</a> 
+			
+                </td>
+            </tr>
+           <?php echo '<?php endforeach; ?>'; ?>
+			<tr>
+					<td><input type="submit" value="删除所选"/></td>
+					<td align="right" nowrap="true" colspan="<?php echo $k+1; ?>"></td>
+			</tr>
+        </table>
+    </div>
+
+	</form>
+
+<?php echo '<?php echo $admin_array[\'show\'];?>'; ?>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+[ 2015-02-09T23:50:45+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Recommend/showlist
+ERR: 无法加载控制器:Recommend
+
+[ 2015-02-09T23:50:47+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Recommend/showlist
+ERR: 无法加载控制器:Recommend
+
+[ 2015-02-09T23:50:53+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Recommend/showlist
+ERR: 无法加载控制器:Recommend
+
+[ 2015-02-09T23:52:23+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Attr/add/type_id/
+ERR: 参数错误或者未定义:type_id
+
+[ 2015-02-09T23:52:31+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Attr/add/type_id/
+ERR: 参数错误或者未定义:type_id
+
+[ 2015-02-09T23:53:52+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Attr/add/type_id/
+ERR: 参数错误或者未定义:type_id
+
+[ 2015-02-09T23:54:22+08:00 ] 127.0.0.1 /tp/admin.28.com/index.php/Goods/Attr/add/type_id/
+ERR: 参数错误或者未定义:type_id
+

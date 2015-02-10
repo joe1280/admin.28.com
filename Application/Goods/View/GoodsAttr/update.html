@@ -1,0 +1,79 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+    <head>
+        <title>添加</title>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8">
+        <link href="./css/mine.css" type="text/css" rel="stylesheet">
+    </head>
+
+    <body>
+
+        <div class="div_head">
+          
+        </div>
+        <div></div>
+		<h2>当位置:修改</h2>
+        <div style="font-size: 13px;margin: 10px 5px">
+            <form action="__SELF__" method="post" enctype="multipart/form-data">
+			<input type="hidden" name="id" value="<?php echo $admin_info['id'];?>"/>
+            <table border="1" width="100%" class="table_a">
+               
+					
+					                <tr>
+                    <td>属性ID</td>
+                    <td><input type="text" name="attr_id" value="<?php echo $admin_info['attr_id']; ?>"/></td>
+				<td>
+								<span class="require-field">*</span>
+								</td>
+                </tr>
+				
+				
+
+
+				 
+			
+					                <tr>
+                    <td>商品ID</td>
+                    <td><input type="text" name="goods_id" value="<?php echo $admin_info['goods_id']; ?>"/></td>
+				<td>
+								<span class="require-field">*</span>
+								</td>
+                </tr>
+				
+				
+
+
+				 
+			
+					                <tr>
+                    <td>属性值</td>
+                    <td><input type="text" name="goods_attr_val" value="<?php echo $admin_info['goods_attr_val']; ?>"/></td>
+				<td>
+								<span class="require-field">*</span>
+								</td>
+                </tr>
+				
+				
+
+
+				 
+			
+					                <tr>
+                    <td>属性价格</td>
+                    <td><input type="text" name="goods_attr_price" value="<?php echo $admin_info['goods_attr_price']; ?>"/></td>
+				<td>
+								<span class="require-field">*</span>
+								</td>
+                </tr>
+				
+				
+
+
+				 
+			            </table>
+
+			 <input type="submit" value="修改">
+            </form>
+        </div>
+    </body>
+</html>
